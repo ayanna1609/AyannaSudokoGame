@@ -10,9 +10,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///puzzles.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Allow frontend origin from env variable, fallback to localhost for dev
-frontend_origin = os.environ.get('FRONTEND_URL', 'http://localhost:3000')
-CORS(app, origins=[frontend_origin])
+# Allow all origins for production compatibility
+CORS(app, resources={r"/*": {"origins": "*"}})
 db.init_app(app)
 
 # Pool of Sudoku puzzles (0 = empty)
