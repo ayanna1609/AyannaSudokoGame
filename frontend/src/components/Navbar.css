@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #42a5f5, #ab47bc);
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 17px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #ffe082;
+  transform: scale(1.05);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+}

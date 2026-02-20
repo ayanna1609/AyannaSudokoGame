@@ -1,0 +1,33 @@
+.page-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f3e5f5, #e1f5fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.page-container h1 {
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+.page-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.page-container ul, .page-container ol {
+  text-align: left;
+  font-size: 17px;
+  margin: 0 auto;
+  padding-left: 30px;
+  color: #444;
+}
+
+.page-container li {
+  margin-bottom: 10px;
+}

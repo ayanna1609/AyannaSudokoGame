@@ -1,0 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Instructions from './components/Instructions';
+import SudokuBoard from './components/SudokuBoard';
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/play" element={<SudokuBoard />} />
+        <Route path="/instructions" element={<Instructions />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

@@ -1,0 +1,86 @@
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+}
+
+.sudoku-row {
+  display: flex;
+}
+
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+.sudoku-cell:focus {
+  border-color: #ff4081;
+  outline: none;
+  background-color: #ffeef5;
+}
+
+/* Thicker borders for 3x3 grids */
+.sudoku-row:nth-child(3n) .sudoku-cell {
+  border-bottom: 3px solid #333;
+}
+
+.sudoku-cell:nth-child(3n) {
+  border-right: 3px solid #333;
+}
+
+.solve-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.solve-btn:hover {
+  background-color: #004d40;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.new-btn {
+  background-color: #1565c0;
+}
+
+.new-btn:hover {
+  background-color: #0d47a1;
+}
+
+.clear-btn {
+  background-color: #e65100;
+}
+
+.clear-btn:hover {
+  background-color: #bf360c;
+}
+
+.sudoku-cell.fixed {
+  background-color: #e8eaf6;
+  font-weight: bold;
+  color: #1a237e;
+}
